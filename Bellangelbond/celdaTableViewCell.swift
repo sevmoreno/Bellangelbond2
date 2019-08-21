@@ -12,11 +12,15 @@ class celdaTableViewCell: UITableViewCell {
     
     @IBOutlet weak var contenedor: UIView!
     
+    @IBOutlet weak var homeTitle: UILabel!
+    @IBOutlet weak var homeSubtitle: UILabel!
+    @IBOutlet weak var homeImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         contenedor.backgroundColor = UIColor(hue: 0.6778, saturation: 1, brightness: 0.27, alpha: 1.0)
-        contenedor.alpha = 0.50
+      //  contenedor.alpha = 0.50
         contenedor.layer.cornerRadius = 10
        /*
         contenedor.layer.shadowColor = UIColor.black.cgColor

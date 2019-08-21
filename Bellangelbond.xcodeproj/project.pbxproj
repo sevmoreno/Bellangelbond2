@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6522F8572306446D0058EA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F8562306446D0058EA1E /* ViewController.swift */; };
+		6522F8572306446D0058EA1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F8562306446D0058EA1E /* HomeViewController.swift */; };
 		6522F859230653110058EA1E /* celdaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F858230653110058EA1E /* celdaTableViewCell.swift */; };
 		6522F85B2306FCEB0058EA1E /* DiscoverMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */; };
 		6522F85D2306FEEB0058EA1E /* ComunidadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F85C2306FEEB0058EA1E /* ComunidadViewController.swift */; };
@@ -18,10 +18,18 @@
 		653E44DF230612CC003D5603 /* Bellangelbond.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 653E44DD230612CC003D5603 /* Bellangelbond.xcdatamodeld */; };
 		653E44E1230612CD003D5603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 653E44E0230612CD003D5603 /* Assets.xcassets */; };
 		653E44E4230612CD003D5603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653E44E2230612CD003D5603 /* LaunchScreen.storyboard */; };
+		65414D5F230CC51400F82264 /* comunidadCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65414D5E230CC51400F82264 /* comunidadCellTableViewCell.swift */; };
+		65414D61230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65414D60230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift */; };
+		6567F57523085F6600DFF8F7 /* newsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F57423085F6600DFF8F7 /* newsFeed.swift */; };
+		6584619F230B0CA400670B89 /* advengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584619E230B0CA400670B89 /* advengers.swift */; };
+		65AE1FC3230B75F60054C2D9 /* logInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE1FC2230B75F60054C2D9 /* logInViewController.swift */; };
+		D97C73E9CDA9665AF74F2138 /* Pods_Bellangelbond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097DFBD11979C0E3F111CD14 /* Pods_Bellangelbond.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6522F8562306446D0058EA1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		097DFBD11979C0E3F111CD14 /* Pods_Bellangelbond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bellangelbond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCC1BB6BB1C1B5FC6583080 /* Pods-Bellangelbond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bellangelbond.release.xcconfig"; path = "Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond.release.xcconfig"; sourceTree = "<group>"; };
+		6522F8562306446D0058EA1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6522F858230653110058EA1E /* celdaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaTableViewCell.swift; sourceTree = "<group>"; };
 		6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMusicViewController.swift; sourceTree = "<group>"; };
 		6522F85C2306FEEB0058EA1E /* ComunidadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunidadViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +42,13 @@
 		653E44E0230612CD003D5603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		653E44E3230612CD003D5603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		653E44E5230612CD003D5603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65414D5E230CC51400F82264 /* comunidadCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = comunidadCellTableViewCell.swift; path = Controller/comunidadCellTableViewCell.swift; sourceTree = "<group>"; };
+		65414D60230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiscoverTheMusicTableViewCell.swift; path = Controller/DiscoverTheMusicTableViewCell.swift; sourceTree = "<group>"; };
+		6567F57423085F6600DFF8F7 /* newsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsFeed.swift; sourceTree = "<group>"; };
+		6584619E230B0CA400670B89 /* advengers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advengers.swift; sourceTree = "<group>"; };
+		65AE1FC1230B75A40054C2D9 /* Bellangelbond.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bellangelbond.entitlements; sourceTree = "<group>"; };
+		65AE1FC2230B75F60054C2D9 /* logInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInViewController.swift; sourceTree = "<group>"; };
+		B8895B2F85413A752B9D5074 /* Pods-Bellangelbond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bellangelbond.debug.xcconfig"; path = "Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +56,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97C73E9CDA9665AF74F2138 /* Pods_Bellangelbond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2696E971F6EC7E75E33EDC64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8895B2F85413A752B9D5074 /* Pods-Bellangelbond.debug.xcconfig */,
+				0CCC1BB6BB1C1B5FC6583080 /* Pods-Bellangelbond.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		653E44CA230612CC003D5603 = {
 			isa = PBXGroup;
 			children = (
 				653E44D5230612CC003D5603 /* Bellangelbond */,
 				653E44D4230612CC003D5603 /* Products */,
+				2696E971F6EC7E75E33EDC64 /* Pods */,
+				BF817ED3FF7A39EC1BC380F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,20 +93,50 @@
 		653E44D5230612CC003D5603 /* Bellangelbond */ = {
 			isa = PBXGroup;
 			children = (
+				65AE1FC4230B9BB40054C2D9 /* Controller */,
+				65AE1FC1230B75A40054C2D9 /* Bellangelbond.entitlements */,
+				65CB3327230B2F010003A6D2 /* Model */,
 				653E44D6230612CC003D5603 /* AppDelegate.swift */,
 				653E44DA230612CC003D5603 /* Main.storyboard */,
-				6522F8602306FFF40058EA1E /* StoreViewController.swift */,
-				6522F85E2306FF730058EA1E /* MyVaultViewController.swift */,
-				6522F85C2306FEEB0058EA1E /* ComunidadViewController.swift */,
-				6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */,
+				65414D60230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift */,
+				65414D5E230CC51400F82264 /* comunidadCellTableViewCell.swift */,
 				653E44E0230612CD003D5603 /* Assets.xcassets */,
 				653E44E2230612CD003D5603 /* LaunchScreen.storyboard */,
 				653E44E5230612CD003D5603 /* Info.plist */,
 				653E44DD230612CC003D5603 /* Bellangelbond.xcdatamodeld */,
-				6522F8562306446D0058EA1E /* ViewController.swift */,
 				6522F858230653110058EA1E /* celdaTableViewCell.swift */,
 			);
 			path = Bellangelbond;
+			sourceTree = "<group>";
+		};
+		65AE1FC4230B9BB40054C2D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65AE1FC2230B75F60054C2D9 /* logInViewController.swift */,
+				6522F8602306FFF40058EA1E /* StoreViewController.swift */,
+				6522F85E2306FF730058EA1E /* MyVaultViewController.swift */,
+				6522F85C2306FEEB0058EA1E /* ComunidadViewController.swift */,
+				6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */,
+				6522F8562306446D0058EA1E /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65CB3327230B2F010003A6D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6567F57423085F6600DFF8F7 /* newsFeed.swift */,
+				6584619E230B0CA400670B89 /* advengers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF817ED3FF7A39EC1BC380F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				097DFBD11979C0E3F111CD14 /* Pods_Bellangelbond.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653E44E8230612CD003D5603 /* Build configuration list for PBXNativeTarget "Bellangelbond" */;
 			buildPhases = (
+				2FC6E29491183A81CA49C2C4 /* [CP] Check Pods Manifest.lock */,
 				653E44CF230612CC003D5603 /* Sources */,
 				653E44D0230612CC003D5603 /* Frameworks */,
 				653E44D1230612CC003D5603 /* Resources */,
+				1F48CDCE5FD445CA6BB3D494 /* [CP] Embed Pods Frameworks */,
+				5FFA4810857588E2FCB12B83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -114,6 +174,11 @@
 				TargetAttributes = {
 					653E44D2230612CC003D5603 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -148,19 +213,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F48CDCE5FD445CA6BB3D494 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FC6E29491183A81CA49C2C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bellangelbond-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FFA4810857588E2FCB12B83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		653E44CF230612CC003D5603 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6522F8612306FFF40058EA1E /* StoreViewController.swift in Sources */,
-				6522F8572306446D0058EA1E /* ViewController.swift in Sources */,
+				6584619F230B0CA400670B89 /* advengers.swift in Sources */,
+				6522F8572306446D0058EA1E /* HomeViewController.swift in Sources */,
 				6522F85B2306FCEB0058EA1E /* DiscoverMusicViewController.swift in Sources */,
+				65AE1FC3230B75F60054C2D9 /* logInViewController.swift in Sources */,
 				653E44D7230612CC003D5603 /* AppDelegate.swift in Sources */,
 				653E44DF230612CC003D5603 /* Bellangelbond.xcdatamodeld in Sources */,
+				6567F57523085F6600DFF8F7 /* newsFeed.swift in Sources */,
+				65414D5F230CC51400F82264 /* comunidadCellTableViewCell.swift in Sources */,
 				6522F859230653110058EA1E /* celdaTableViewCell.swift in Sources */,
 				6522F85D2306FEEB0058EA1E /* ComunidadViewController.swift in Sources */,
 				6522F85F2306FF740058EA1E /* MyVaultViewController.swift in Sources */,
+				65414D61230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +433,10 @@
 		};
 		653E44E9230612CD003D5603 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8895B2F85413A752B9D5074 /* Pods-Bellangelbond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bellangelbond/Bellangelbond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5766G78FC9;
 				INFOPLIST_FILE = Bellangelbond/Info.plist;
@@ -322,8 +453,10 @@
 		};
 		653E44EA230612CD003D5603 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCC1BB6BB1C1B5FC6583080 /* Pods-Bellangelbond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bellangelbond/Bellangelbond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5766G78FC9;
 				INFOPLIST_FILE = Bellangelbond/Info.plist;
