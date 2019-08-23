@@ -47,6 +47,9 @@ extension DiscoverMusicViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toPlayList", sender: self)
+    }
     
 }
 

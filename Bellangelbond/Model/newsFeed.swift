@@ -8,20 +8,28 @@
 
 import UIKit
 
-class newFeed: NSObject {
+struct newfeedsA: Codable {
+    
+    var codeDate: String
+    var newslista = [newFeed]()
+}
+
+struct newFeed: Codable {
     
     
-    
-    let url: URL 
-    let thumbURL: URL
+    let newsDate: String
+    let url: String
+    let thumbURL: String
     let title: String
     let subtitle: String
     let bodyText: String?
     let urlempty = "www.domain.com/emptyvideo"
-    init(url: String, thumbURL: String, title: String, subtitle: String, bodyText: String?) {
+    
+    init(newsDate: String, url: String, thumbURL: String, title: String, subtitle: String, bodyText: String?) {
         
-        self.url = URL(string: url) ?? URL (string: "www.domain.com/emptyvideo")!
-        self.thumbURL = URL(string: thumbURL) ?? URL (string: "www.domain.com/emptyvideo")!
+        self.newsDate = newsDate
+        self.url = url
+        self.thumbURL = thumbURL
         self.title = title
         self.subtitle = subtitle
         if let a = bodyText {
@@ -29,10 +37,10 @@ class newFeed: NSObject {
         } else {
             self.bodyText = ""
         }
-        super.init()
+       
     }
     
-    class func localNEws() -> [newFeed] {
+    static func localNEws() -> [newFeed] {
         var videos: [newFeed] = []
         let names = ["newYorkFlip", "bulletTrain", "monkey", "shark"]
         let titles = ["New York Flip", "Bullet Train Adventure", "Monkey Village", "Robot Battles"]
@@ -51,14 +59,15 @@ class newFeed: NSObject {
             let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
             //let thumbURL = URL(fileURLWithPath: thumbURLPath)
             
-            let video = newFeed(url: urlPath, thumbURL: thumbURLPath, title: titles[index], subtitle: subtitles[index], bodyText: bobyTexts[index])
+            let video = newFeed(newsDate: "" ,url: urlPath, thumbURL: thumbURLPath, title: titles[index], subtitle: subtitles[index], bodyText: bobyTexts[index])
             videos.append(video)
         }
         return videos
     }
     
   
-    class func allVideos() -> [newFeed] {
+    static func allVideos() -> [newFeed] {
+    
         var videos = localNEws()
         let videoURLString = "https://wolverine.raywenderlich.com/content/ios/tutorials/video_streaming/foxVillage.mp4"
         
@@ -67,7 +76,7 @@ class newFeed: NSObject {
             let thumbURLPath = Bundle.main.path(forResource: "foxVillage", ofType: "png")!
            // let thumbURL = URL(fileURLWithPath: thumbURLPath)
             
-            let remoteVideo = newFeed(url: videoURLString, thumbURL: thumbURLPath, title: "キツネ村", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!", bodyText: "")
+            let remoteVideo = newFeed(newsDate: "" , url: videoURLString, thumbURL: thumbURLPath, title: "キツネ村", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!", bodyText: "")
             videos.append(remoteVideo)
         }
         
@@ -76,4 +85,5 @@ class newFeed: NSObject {
 
     
 }
+
 

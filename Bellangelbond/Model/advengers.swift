@@ -5,15 +5,26 @@
 import UIKit
 import CoreData
 import MapKit
-// import Firebase
+import Firebase
+
 
 class advengers {
     
     // --- The Singleton
-    var newsfeeds = [newFeed (url: "", thumbURL: "", title: "", subtitle: "", bodyText: "")]
     
+    let usersStatusRef = Database.database().reference(withPath: "online")
     static let shared = advengers ()
     
+    // -------------------- NEWS TOOOLS -------------------
+    let lastNewsRef = Database.database().reference().child ("last_news")
+   // var newsfeeds = [newFeed (newsDate: "", url: "", thumbURL: "", title: "", subtitle: "", bodyText: "")]
+    
+    var newfeeds = [newFeed]()
+
+
+    let storageRef = Storage.storage().reference()
+    
+
     private init() {
         
     }
@@ -23,3 +34,4 @@ class advengers {
     
    
 }
+
