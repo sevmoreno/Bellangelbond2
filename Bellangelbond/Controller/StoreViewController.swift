@@ -28,7 +28,11 @@ class StoreViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func backdoorButton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "backDoor", sender: self)
+    }
+    
 }
 
 

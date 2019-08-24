@@ -325,6 +325,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0d-va-dhU">
+                                <rect key="frame" x="170" y="761" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back Door"/>
+                                <connections>
+                                    <action selector="backdoorButton:" destination="lt3-td-pIS" eventType="touchUpInside" id="PlI-p9-PAL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PXR-pz-GfF"/>
@@ -332,11 +340,27 @@
                     <tabBarItem key="tabBarItem" title="Store" image="       " id="UpO-tv-LPy"/>
                     <connections>
                         <outlet property="store" destination="Pbb-Zw-a4i" id="Q9m-T0-YZr"/>
+                        <segue destination="Lqw-iz-VB5" kind="show" identifier="backDoor" id="dtZ-VO-XnS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te1-vd-dUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1548" y="2026"/>
+        </scene>
+        <!--Back Door View Controller-->
+        <scene sceneID="qiW-DV-mP4">
+            <objects>
+                <viewController id="Lqw-iz-VB5" customClass="BackDoorViewController" customModule="Bellangelbond" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qfR-Nu-uSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="glZ-jI-IJL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MJ-wK-TMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="2026"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="nU0-Ji-MLB">

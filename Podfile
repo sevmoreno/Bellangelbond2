@@ -10,7 +10,7 @@ target 'Bellangelbond' do
 
 pod 'Firebase/Analytics'
 
-dod 'Firebase'
+pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Database'
@@ -19,4 +19,6 @@ pod 'FirebaseUI'
 pod 'FirebaseUI/Auth'
 pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
+
+
 end
