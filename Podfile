@@ -19,6 +19,6 @@ pod 'FirebaseUI'
 pod 'FirebaseUI/Auth'
 pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
-
+pod 'SwiftJWT'
 
 end

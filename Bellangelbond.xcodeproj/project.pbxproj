@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650D3150231489D500C23BC5 /* privateKey.key in Resources */ = {isa = PBXBuildFile; fileRef = 650D314F231489D500C23BC5 /* privateKey.key */; };
+		650D31532314A11C00C23BC5 /* PlayerMusciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D31522314A11C00C23BC5 /* PlayerMusciViewController.swift */; };
+		650D31562314AE2F00C23BC5 /* APM.wav in Resources */ = {isa = PBXBuildFile; fileRef = 650D31552314AE2E00C23BC5 /* APM.wav */; };
 		6522F8572306446D0058EA1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F8562306446D0058EA1E /* HomeViewController.swift */; };
 		6522F859230653110058EA1E /* celdaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F858230653110058EA1E /* celdaTableViewCell.swift */; };
 		6522F85B2306FCEB0058EA1E /* DiscoverMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */; };
@@ -35,6 +38,11 @@
 /* Begin PBXFileReference section */
 		097DFBD11979C0E3F111CD14 /* Pods_Bellangelbond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bellangelbond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CCC1BB6BB1C1B5FC6583080 /* Pods-Bellangelbond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bellangelbond.release.xcconfig"; path = "Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond.release.xcconfig"; sourceTree = "<group>"; };
+		650D314F231489D500C23BC5 /* privateKey.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privateKey.key; sourceTree = SOURCE_ROOT; };
+		650D31512314A0CB00C23BC5 /* 04 Adagio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Adagio.m4a"; sourceTree = "<group>"; };
+		650D31522314A11C00C23BC5 /* PlayerMusciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerMusciViewController.swift; path = Controller/PlayerMusciViewController.swift; sourceTree = "<group>"; };
+		650D31542314A65500C23BC5 /* 04Adagio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04Adagio.m4a; sourceTree = "<group>"; };
+		650D31552314AE2E00C23BC5 /* APM.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = APM.wav; sourceTree = "<group>"; };
 		6522F8562306446D0058EA1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6522F858230653110058EA1E /* celdaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaTableViewCell.swift; sourceTree = "<group>"; };
 		6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMusicViewController.swift; sourceTree = "<group>"; };
@@ -105,12 +113,17 @@
 		653E44D5230612CC003D5603 /* Bellangelbond */ = {
 			isa = PBXGroup;
 			children = (
+				650D31512314A0CB00C23BC5 /* 04 Adagio.m4a */,
+				650D314F231489D500C23BC5 /* privateKey.key */,
+				650D31542314A65500C23BC5 /* 04Adagio.m4a */,
 				65AE1FC4230B9BB40054C2D9 /* Controller */,
 				65AE1FC1230B75A40054C2D9 /* Bellangelbond.entitlements */,
 				65CB3327230B2F010003A6D2 /* Model */,
 				653E44D6230612CC003D5603 /* AppDelegate.swift */,
 				653E44DA230612CC003D5603 /* Main.storyboard */,
+				650D31522314A11C00C23BC5 /* PlayerMusciViewController.swift */,
 				659843C2231091ED007BCD6E /* BackDoorViewController.swift */,
+				650D31552314AE2E00C23BC5 /* APM.wav */,
 				65414D64230CCD8C00F82264 /* PlaylistTableViewCell.swift */,
 				65414D62230CCABC00F82264 /* PlaylistViewController.swift */,
 				65414D60230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift */,
@@ -225,7 +238,9 @@
 			files = (
 				653E44E4230612CD003D5603 /* LaunchScreen.storyboard in Resources */,
 				653E44E1230612CD003D5603 /* Assets.xcassets in Resources */,
+				650D31562314AE2F00C23BC5 /* APM.wav in Resources */,
 				653E44DC230612CC003D5603 /* Main.storyboard in Resources */,
+				650D3150231489D500C23BC5 /* privateKey.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +325,7 @@
 				65414D5F230CC51400F82264 /* comunidadCellTableViewCell.swift in Sources */,
 				659843C3231091ED007BCD6E /* BackDoorViewController.swift in Sources */,
 				6522F859230653110058EA1E /* celdaTableViewCell.swift in Sources */,
+				650D31532314A11C00C23BC5 /* PlayerMusciViewController.swift in Sources */,
 				6522F85D2306FEEB0058EA1E /* ComunidadViewController.swift in Sources */,
 				6522F85F2306FF740058EA1E /* MyVaultViewController.swift in Sources */,
 				65414D61230CC7EF00F82264 /* DiscoverTheMusicTableViewCell.swift in Sources */,

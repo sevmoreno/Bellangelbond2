@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="3284.057971014493" y="502.90178571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Musci View Controller-->
         <scene sceneID="dWd-Kd-W0Q">
             <objects>
-                <viewController id="ppg-Zj-tRQ" sceneMemberID="viewController">
+                <viewController id="ppg-Zj-tRQ" customClass="PlayerMusciViewController" customModule="Bellangelbond" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Yu-5r-hL5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

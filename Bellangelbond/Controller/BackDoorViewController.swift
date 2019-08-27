@@ -7,7 +7,8 @@
 //
 
 import UIKit
-//import SwiftJWT
+import SwiftJWT
+
 
 class BackDoorViewController: UIViewController {
     
@@ -19,10 +20,64 @@ class BackDoorViewController: UIViewController {
         "subtitle" : "someValue",
         "bodyText" : ""]
     
-
+    struct MyClaims: Claims {
+        let iss: String
+        let iat: Date
+        let exp: Date
+    }
+    
+    struct MyClaims2: Claims {
+        let iss: String
+        let sub: String
+        let exp: Date
+        let admin: Bool
+    }
+    let myClaims2 = MyClaims2(iss: "Kitura", sub: "John", exp: Date(timeIntervalSinceNow: 3600), admin: true)
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Este es el valor de iat")
+        let unixTimestamp = UInt(NSDate().timeIntervalSince1970*1000)
+        print(unixTimestamp)
+     //   let myHeader = Header(kid: "2ZL2JTUB26")
+        let myHeader = Header(kid: "KeyID1")
+        /*
+        
+        let myClaims = MyClaims(iss: "5766G78FC9",  iat: Date(), exp: Date (timeIntervalSinceNow: 3600))
+        var myJWT = JWT(header: myHeader, claims: myClaims)
+        
+       if  let urlPath = Bundle.main.url(forResource: "AuthKey_2ZL2JTUB27", withExtension: "p8")
+        
+       {
+        print("Hasta aca llegamos A")
+        let privateKey: Data = try! Data(contentsOf: urlPath, options: .alwaysMapped)
+        print("Decodifico Este:")
+        print (String(decoding: privateKey, as: UTF8.self))
+        let jwtSigner = JWTSigner.rs256(privateKey: privateKey)
+        let signedJWT = try! myJWT.sign(using: jwtSigner)
+        
+        }
+ 
+ */
+        
+        
+        // SECOND PART
+        if  let urlPath2 = Bundle.main.url(forResource: "privateKey", withExtension: "key")
+            
+        {
+        var myJWT2 = JWT(header: myHeader, claims: myClaims2)
+        //let privateKeyPath2 = URL(fileURLWithPath: urlPath2)
+        let privateKey2: Data = try! Data(contentsOf: urlPath2, options: .alwaysMapped)
+        //let publicKeyPath2 = URL(fileURLWithPath: urlPath2)
+        let publicKey2: Data = try! Data(contentsOf: urlPath2, options: .alwaysMapped)
+        
+        let jwtSigner2 = JWTSigner.rs256(privateKey: privateKey2)
+        
+        let signedJWT = try! myJWT2.sign(using: jwtSigner2)
+        
+        }
         // Do any additional setup after loading the view.
         
         
