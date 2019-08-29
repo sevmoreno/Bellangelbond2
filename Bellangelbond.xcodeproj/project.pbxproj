@@ -10,6 +10,7 @@
 		650D3150231489D500C23BC5 /* privateKey.key in Resources */ = {isa = PBXBuildFile; fileRef = 650D314F231489D500C23BC5 /* privateKey.key */; };
 		650D31532314A11C00C23BC5 /* PlayerMusciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D31522314A11C00C23BC5 /* PlayerMusciViewController.swift */; };
 		650D31562314AE2F00C23BC5 /* APM.wav in Resources */ = {isa = PBXBuildFile; fileRef = 650D31552314AE2E00C23BC5 /* APM.wav */; };
+		650D31582316DECD00C23BC5 /* pathDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D31572316DECD00C23BC5 /* pathDiscover.swift */; };
 		6522F8572306446D0058EA1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F8562306446D0058EA1E /* HomeViewController.swift */; };
 		6522F859230653110058EA1E /* celdaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F858230653110058EA1E /* celdaTableViewCell.swift */; };
 		6522F85B2306FCEB0058EA1E /* DiscoverMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */; };
@@ -43,6 +44,7 @@
 		650D31522314A11C00C23BC5 /* PlayerMusciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerMusciViewController.swift; path = Controller/PlayerMusciViewController.swift; sourceTree = "<group>"; };
 		650D31542314A65500C23BC5 /* 04Adagio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04Adagio.m4a; sourceTree = "<group>"; };
 		650D31552314AE2E00C23BC5 /* APM.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = APM.wav; sourceTree = "<group>"; };
+		650D31572316DECD00C23BC5 /* pathDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathDiscover.swift; sourceTree = "<group>"; };
 		6522F8562306446D0058EA1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6522F858230653110058EA1E /* celdaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaTableViewCell.swift; sourceTree = "<group>"; };
 		6522F85A2306FCEB0058EA1E /* DiscoverMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMusicViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				659843C423109D64007BCD6E /* itunesModel.swift */,
 				659843C62310A003007BCD6E /* mediaBModel.swift */,
 				65F374F32310B0EF000CC65D /* tokenRequest.swift */,
+				650D31572316DECD00C23BC5 /* pathDiscover.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				6522F8612306FFF40058EA1E /* StoreViewController.swift in Sources */,
 				6584619F230B0CA400670B89 /* advengers.swift in Sources */,
+				650D31582316DECD00C23BC5 /* pathDiscover.swift in Sources */,
 				659843C523109D64007BCD6E /* itunesModel.swift in Sources */,
 				65414D63230CCABC00F82264 /* PlaylistViewController.swift in Sources */,
 				6522F8572306446D0058EA1E /* HomeViewController.swift in Sources */,

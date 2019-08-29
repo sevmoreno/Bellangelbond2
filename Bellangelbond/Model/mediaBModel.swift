@@ -9,7 +9,8 @@
 import Foundation
 
 
-struct mediaBModel {
+struct mediaBModel: Codable {
+    
     var mediaURL: String = ""
     var wrapperType: String = "track"
     var kind: String = "song"
@@ -19,6 +20,7 @@ struct mediaBModel {
     var artistName: String = "Jack Johnson"
     var collectionName: String = "Sing-a-Longs and Lullabies for the Film Curious George"
     var trackName: String = "Upside Down"
+    var composser: String = ""
     
     var collectionCensoredName: String = "Sing-a-Longs and Lullabies for the Film Curious George"
     var trackCensoredName: String = "Upside Down"
@@ -29,4 +31,5 @@ struct mediaBModel {
     var artworkUrl60: String = "http://a1.itunes.apple.com/r10/Music/3b/6a/33/mzi.qzdqwsel.60x60-50.jpg"
     var artworkUrl100: String = "http://a1.itunes.apple.com/r10/Music/3b/6a/33/mzi.qzdqwsel.100x100-75.jpg"
     var primaryGenreName: String = "Rock"
+ 
 }

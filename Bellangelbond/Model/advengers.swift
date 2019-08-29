@@ -24,6 +24,11 @@ class advengers {
 
     let storageRef = Storage.storage().reference()
     
+    let pathsRef = Database.database().reference().child ("Paths")
+    
+    let mediaRef = Database.database().reference().child ("Media")
+    
+    
 
     private init() {
         
