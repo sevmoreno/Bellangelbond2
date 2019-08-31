@@ -12,10 +12,10 @@ import Foundation
 
 struct pathDiscover: Codable {
     
-    var idPath: String
-    var pathName: String
-    var pathSubtitle: String
-    var urlImage: String
-    var urlThumb: String
-    var listaDeMedia:[String]
+    var idPath: String = ""
+    var pathName: String = ""
+    var pathSubtitle: String = ""
+    var urlImage: String = ""
+    var urlThumb: String = ""
+    var listaDeMedia:[String] = ["fs"]
 }

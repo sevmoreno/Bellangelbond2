@@ -28,6 +28,10 @@ class advengers {
     
     let mediaRef = Database.database().reference().child ("Media")
     
+    var user = userAcces ()
+    
+    
+    var mediaPlayList = [mediaBModel] ()
     
 
     private init() {

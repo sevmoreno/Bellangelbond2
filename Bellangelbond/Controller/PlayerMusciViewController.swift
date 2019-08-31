@@ -16,6 +16,9 @@ class PlayerMusciViewController: UIViewController {
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
     var isVideoPlaying = false
+    var mediaToPlay = mediaBModel ()
+    var indexToPlayIndex = 8
+    
     
     @IBOutlet weak var currentTime: UILabel!
     @IBOutlet weak var sliderConnect: UISlider!
@@ -24,7 +27,7 @@ class PlayerMusciViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let resourceURL = URL (string: "https://firebasestorage.googleapis.com/v0/b/bellangelbond.appspot.com/o/basicpath%2F04%20Adagio.m4a?alt=media&token=14929ff6-e480-44de-b067-71c290bfe124")!
+        let resourceURL = URL (string: mediaToPlay.mediaURL)!
         player = AVPlayer (url: resourceURL)
         playerLayer = AVPlayerLayer (player: player)
         playerLayer.videoGravity = .resize

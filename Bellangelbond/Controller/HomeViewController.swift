@@ -24,6 +24,9 @@ class HomeViewController: UIViewController {
         tabla.dataSource = self
         tabla.delegate = self
         
+        // Duumy antes de conetar infomracion de USuario
+        advengers.shared.user.paths.removeAll()
+        advengers.shared.user.paths.append("pathInicio")
     
         
         

@@ -308,17 +308,7 @@ class BackDoorViewController: UIViewController {
                     print(noticia.value(forKey: "pathInicio"))
                     
                     for elemento2 in noticia.allValues  {
-                       
-/*
-                        let jsonEncoder = JSONEncoder()
-                        let jsonData = try jsonEncoder.encode(dog)
-                        let json = String(data: jsonData, encoding: String.Encoding.utf16)
-                        
-                        // Decode
-                        let jsonDecoder = JSONDecoder()
-                        let dog = try jsonDecoder.decode(Dog.self, from: jsonData)
-   */
-                        
+
                       
                         print("Esto es Elemento 2")
                         print(elemento2 as! String)

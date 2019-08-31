@@ -12,35 +12,103 @@ class PlaylistViewController: UIViewController {
 
     @IBOutlet weak var tablaPlayList: UITableView!
     
+    var mediaListkey = [String] ()
+
+    var mediaToSend = mediaBModel ()
+    var mediaToSendIndex = 4
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tablaPlayList.dataSource = self
         tablaPlayList.delegate = self
+        advengers.shared.mediaPlayList.removeAll()
+        print ("Cantindad del playlist")
+        print(mediaListkey.count)
+        
+        advengers.shared.mediaRef.observe(.value, with: { snapshot in
+            
+            
+            if snapshot.childrenCount > 0 {
+                
+                print("CONTO CHILDERSS???")
+                if let noticia = snapshot.value as? NSDictionary {
+                    for canciones in self.mediaListkey {
+                var elemento2 = noticia.value(forKey: canciones)
+                        
+                if elemento2 != nil {
+                    let elemento3 = elemento2 as! String
+                    print("ELEMENTO DEL PLAYLIST")
+                    print(elemento3)
+                            
+                    let decoder = JSONDecoder ()
+                    let dataP = elemento3.data(using: .utf8)!
+                    let contendioDelPath = try! decoder.decode(mediaBModel.self, from: dataP)
+                    advengers.shared.mediaPlayList.append(contendioDelPath)
+                        //    self.pathsDelUsuario.append(contendioDelPath)
+                        //    self.discoverMusic.reloadData()
+                    self.tablaPlayList.reloadData()
+                        }
+                        
+                    }
+                    
+                    
+                }
+            }
+            
+        })
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ToSong" {
+            
+                let controller = segue.destination as! PlayerMusciViewController
+                controller.mediaToPlay = mediaToSend
+                controller.indexToPlayIndex = mediaToSendIndex
+            
+        }
     }
-    */
 
+ 
 }
 
 extension PlaylistViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return advengers.shared.mediaPlayList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "playlistCell", for: indexPath)
+        
+        if indexPath.item >= 0 {
+            
+            if let imagen = cell.viewWithTag(501) as? UIImageView
+                
+            {
+                imagen.image = UIImage(named: "fondo")
+                
+            }
+            
+            if let titulo = cell.viewWithTag(502) as? UILabel
+                
+            {
+                titulo.text = advengers.shared.mediaPlayList[indexPath.item].trackName
+                
+            }
+            
+            if let subTitulo = cell.viewWithTag(503) as? UILabel
+                
+            {
+                subTitulo.text = advengers.shared.mediaPlayList[indexPath.item].artistName
+                
+            }
+            
+            
+        }
+        
+        
+
         
         
         return cell
@@ -48,6 +116,7 @@ extension PlaylistViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Seleccionada")
+        mediaToSend = advengers.shared.mediaPlayList[indexPath.item]
         self.performSegue(withIdentifier: "ToSong", sender: self)
     }
     
