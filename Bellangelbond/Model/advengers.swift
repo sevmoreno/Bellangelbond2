@@ -33,6 +33,9 @@ class advengers {
     
     var mediaPlayList = [mediaBModel] ()
     
+    
+    var token: String = ""
+    
 
     private init() {
         

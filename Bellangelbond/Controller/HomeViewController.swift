@@ -8,18 +8,89 @@
 
 import UIKit
 import Firebase
-
+import SwiftJWT
+import StoreKit
 
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tabla: UITableView!
     
-
-  
+    let controller = SKCloudServiceController()
+    let developerToken =  advengers.shared.token
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+      DispatchQueue.main.async {
+        SKCloudServiceController.requestAuthorization { (status: SKCloudServiceAuthorizationStatus) in
+            
+            switch status {
+                
+            case .authorized:
+                
+                print("Autorizado")
+                
+            case .denied:
+                
+                print("Denegado")
+                
+            case .notDetermined:
+                print("Denegado")
+                
+            case .restricted:
+                print("Denegado")
+                
+            @unknown default:
+                print("No se sabe")
+            }
+        }
+        }
+       /*
+        let teamId = "5766G78FC9"
+        let keyId = "2ZL2JTUB26"
+        let keyFileUrl = Bundle.main.url(forResource: "AuthKey_2ZL2JTUB27", withExtension: "p8")
+        
+        struct MyClaims: Claims {
+            let iss: String
+            let iat: Date?
+            let exp: Date?
+        }
+        
+        let myHeader = Header(kid: keyId)
+        let myClaims = MyClaims(iss: teamId, iat: Date(), exp: Date() +  24 * 60 * 60)
+        var myJWT = SwiftJWT.JWT(header: myHeader, claims: myClaims)
+        
+        let token = try! myJWT.sign(using: .es256(privateKey: try! String(contentsOf: keyFileUrl!).data(using: .utf8)!))
+        
+        print("Este es el token")
+        print (token)
+ */
+        
+        advengers.shared.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjJaTDJKVFVCMjYifQ.eyJpc3MiOiI1NzY2Rzc4RkM5IiwiaWF0IjoxNTY3NTUwNzkyLjY4MTE3ODEsImV4cCI6MTU2NzYzNzE5Mi42ODExNzl9.ngPxIDR_n-MNexgiEb_MlQEz9K3kpeSxEnqmIZxYeUPHsMuoIr6ANfGt4lO4EEbiodi4bMMWzmcaNyhQXDOcWw"
+        
+       
+        controller.requestUserToken(forDeveloperToken: developerToken) { userToken, error in
+            // Use this value for recommendation requests.
+            print("Este es el user token")
+            print(userToken)
+            print(error.debugDescription)
+        }
+
+        
+        DispatchQueue.main.async {
+        SKCloudServiceController().requestStorefrontCountryCode { countryCode, error in
+            // Use the value in countryCode for subsequent API requests
+            print("Codigo de Pais")
+            print(countryCode)
+            print(error.debugDescription)
+        }
+        
+        }
+       
+  
+    
         
         tabla.dataSource = self
         tabla.delegate = self
