@@ -34,7 +34,7 @@ class advengers {
     var mediaPlayList = [mediaBModel] ()
     
     
-    var token: String = ""
+    var token: String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjhMUTdMQUpMRlkifQ.eyJpc3MiOiI1NzY2Rzc4RkM5IiwiaWF0IjoxNTY3ODA2NTcxLjYzMjM0NSwiZXhwIjoxNTY3ODkyOTcxLjYzMjM0NX0.44F-mTZWq75TUydML66uQpKGtPBLKJ2DXaREod0EqvSGWFEPZxlZBt0ObuMeBPVTQ-y1VsoApUmmoc2z_Pf5hg"
     
 
     private init() {

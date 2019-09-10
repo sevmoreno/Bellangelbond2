@@ -33,7 +33,8 @@
 		659843C523109D64007BCD6E /* itunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659843C423109D64007BCD6E /* itunesModel.swift */; };
 		659843C72310A003007BCD6E /* mediaBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659843C62310A003007BCD6E /* mediaBModel.swift */; };
 		65AE1FC3230B75F60054C2D9 /* logInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE1FC2230B75F60054C2D9 /* logInViewController.swift */; };
-		65D42407231F032500DB286E /* AuthKey_2ZL2JTUB27.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 65D42406231F032500DB286E /* AuthKey_2ZL2JTUB27.p8 */; };
+		65D424092322F19500DB286E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65D424082322F19500DB286E /* GoogleService-Info.plist */; };
+		65D4240B23230ABF00DB286E /* AuthKey_8LQ7LAJLFY.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 65D4240A23230ABF00DB286E /* AuthKey_8LQ7LAJLFY.p8 */; };
 		65F374F42310B0EF000CC65D /* tokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F374F32310B0EF000CC65D /* tokenRequest.swift */; };
 		D97C73E9CDA9665AF74F2138 /* Pods_Bellangelbond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097DFBD11979C0E3F111CD14 /* Pods_Bellangelbond.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +73,8 @@
 		659843C62310A003007BCD6E /* mediaBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mediaBModel.swift; sourceTree = "<group>"; };
 		65AE1FC1230B75A40054C2D9 /* Bellangelbond.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bellangelbond.entitlements; sourceTree = "<group>"; };
 		65AE1FC2230B75F60054C2D9 /* logInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInViewController.swift; sourceTree = "<group>"; };
-		65D42406231F032500DB286E /* AuthKey_2ZL2JTUB27.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_2ZL2JTUB27.p8; sourceTree = SOURCE_ROOT; };
+		65D424082322F19500DB286E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65D4240A23230ABF00DB286E /* AuthKey_8LQ7LAJLFY.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_8LQ7LAJLFY.p8; sourceTree = "<group>"; };
 		65F374F32310B0EF000CC65D /* tokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tokenRequest.swift; sourceTree = "<group>"; };
 		B8895B2F85413A752B9D5074 /* Pods-Bellangelbond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bellangelbond.debug.xcconfig"; path = "Target Support Files/Pods-Bellangelbond/Pods-Bellangelbond.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,9 +121,10 @@
 		653E44D5230612CC003D5603 /* Bellangelbond */ = {
 			isa = PBXGroup;
 			children = (
+				65D424082322F19500DB286E /* GoogleService-Info.plist */,
 				650D31512314A0CB00C23BC5 /* 04 Adagio.m4a */,
 				650D314F231489D500C23BC5 /* privateKey.key */,
-				65D42406231F032500DB286E /* AuthKey_2ZL2JTUB27.p8 */,
+				65D4240A23230ABF00DB286E /* AuthKey_8LQ7LAJLFY.p8 */,
 				650D31542314A65500C23BC5 /* 04Adagio.m4a */,
 				65AE1FC4230B9BB40054C2D9 /* Controller */,
 				65AE1FC1230B75A40054C2D9 /* Bellangelbond.entitlements */,
@@ -216,7 +219,7 @@
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -246,11 +249,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				653E44E4230612CD003D5603 /* LaunchScreen.storyboard in Resources */,
-				65D42407231F032500DB286E /* AuthKey_2ZL2JTUB27.p8 in Resources */,
+				65D4240B23230ABF00DB286E /* AuthKey_8LQ7LAJLFY.p8 in Resources */,
 				653E44E1230612CD003D5603 /* Assets.xcassets in Resources */,
 				650D31562314AE2F00C23BC5 /* APM.wav in Resources */,
 				653E44DC230612CC003D5603 /* Main.storyboard in Resources */,
 				650D3150231489D500C23BC5 /* privateKey.key in Resources */,
+				65D424092322F19500DB286E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -473,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -488,7 +492,6 @@
 			baseConfigurationReference = B8895B2F85413A752B9D5074 /* Pods-Bellangelbond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bellangelbond/Bellangelbond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5766G78FC9;
 				INFOPLIST_FILE = Bellangelbond/Info.plist;
@@ -508,7 +511,6 @@
 			baseConfigurationReference = 0CCC1BB6BB1C1B5FC6583080 /* Pods-Bellangelbond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bellangelbond/Bellangelbond.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5766G78FC9;
 				INFOPLIST_FILE = Bellangelbond/Info.plist;

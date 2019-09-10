@@ -22,23 +22,23 @@ class PlaylistViewController: UIViewController {
         tablaPlayList.dataSource = self
         tablaPlayList.delegate = self
         advengers.shared.mediaPlayList.removeAll()
-        print ("Cantindad del playlist")
-        print(mediaListkey.count)
+     //   print ("Cantindad del playlist")
+       // print(mediaListkey.count)
         
         advengers.shared.mediaRef.observe(.value, with: { snapshot in
             
             
             if snapshot.childrenCount > 0 {
                 
-                print("CONTO CHILDERSS???")
+              //  print("CONTO CHILDERSS???")
                 if let noticia = snapshot.value as? NSDictionary {
                     for canciones in self.mediaListkey {
                 var elemento2 = noticia.value(forKey: canciones)
                         
                 if elemento2 != nil {
                     let elemento3 = elemento2 as! String
-                    print("ELEMENTO DEL PLAYLIST")
-                    print(elemento3)
+                 //   print("ELEMENTO DEL PLAYLIST")
+                 //   print(elemento3)
                             
                     let decoder = JSONDecoder ()
                     let dataP = elemento3.data(using: .utf8)!
@@ -115,7 +115,7 @@ extension PlaylistViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleccionada")
+       // print("Seleccionada")
         mediaToSend = advengers.shared.mediaPlayList[indexPath.item]
         self.performSegue(withIdentifier: "ToSong", sender: self)
     }

@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 import Foundation
-
+import MediaPlayer
 
 class PlayerMusciViewController: UIViewController {
     
@@ -18,14 +18,19 @@ class PlayerMusciViewController: UIViewController {
     var isVideoPlaying = false
     var mediaToPlay = mediaBModel ()
     var indexToPlayIndex = 8
+    var mediaToPlayCode: String = ""
+    var mediaAnalized = MediaJubal()
     
+    @IBOutlet weak var sliderReaccion: UISlider!
     
     @IBOutlet weak var currentTime: UILabel!
     @IBOutlet weak var sliderConnect: UISlider!
     @IBOutlet weak var viewRecurso: UIView!
     @IBOutlet weak var totalTime: UILabel!
     
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let resourceURL = URL (string: mediaToPlay.mediaURL)!
         player = AVPlayer (url: resourceURL)
@@ -35,6 +40,11 @@ class PlayerMusciViewController: UIViewController {
     //    player.currentItem?.addObserver(self, forKeyPath: "currentime", options: [.new,.initial], context: nil)
         player.currentItem?.addObserver(self, forKeyPath: "duration", options: [.new, .initial], context: nil)
         addTimeObserver()
+        mediaToPlayCode = currentMediaPlayCode()
+        
+       
+        
+       
         /*
         
         let path = Bundle.main.url(forResource: "APM", withExtension: "wav")!
@@ -55,7 +65,7 @@ class PlayerMusciViewController: UIViewController {
             }
  */
         
-        
+       
  
         
     }
@@ -68,6 +78,23 @@ class PlayerMusciViewController: UIViewController {
         super.viewDidLayoutSubviews()
         playerLayer.frame = viewRecurso.bounds
         
+    }
+    
+    func currentMediaPlayCode() -> String {
+        
+        var codigoKey = mediaToPlay.trackName + "&&" + mediaToPlay.artistName + "&&" + mediaToPlay.composser
+        
+     
+        var str2 = codigoKey.replacingOccurrences(of: " ", with: "")
+        codigoKey = str2.replacingOccurrences(of: ".", with: "")
+        str2 = codigoKey.replacingOccurrences(of: "#", with: "")
+        codigoKey = str2.replacingOccurrences(of: "$", with: "")
+        str2 = codigoKey.replacingOccurrences(of: "[", with: "")
+        codigoKey = str2.replacingOccurrences(of: "]", with: "")
+        
+
+        
+        return codigoKey
     }
     /*
     // MARK: - Navigation
@@ -113,6 +140,21 @@ class PlayerMusciViewController: UIViewController {
         
         let time = CMTimeMake (value: Int64(newtime * 1000), timescale: 1000)
         player.seek(to: time)
+    }
+    
+    @IBAction func sliderReacction(_ sender: Any) {
+        
+        mediaAnalized.codigokeysong = mediaToPlayCode
+        let duration = CMTimeGetSeconds(player.currentTime())
+        let elemento = mediaBeets (reaction: Double(sliderReaccion!.value), time: duration)
+        mediaAnalized.mediaBts.append(elemento)
+    //    print(elemento)
+        
+        // TODO: PARA SABER CUANDO GRABAMOS LA ANALIZADA  DidDisappear
+        
+        
+        
+        
     }
     
     

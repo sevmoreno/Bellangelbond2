@@ -224,6 +224,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7cq-Eh-RXm">
+                                <rect key="frame" x="20" y="263" width="376" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderReacction:" destination="ppg-Zj-tRQ" eventType="valueChanged" id="It4-hh-wNR"/>
+                                </connections>
+                            </slider>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AkO-Ft-xDD">
                                 <rect key="frame" x="20" y="344" width="374" height="258"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -262,9 +269,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xki-M5-jEr">
-                                        <rect key="frame" x="172" y="49" width="30" height="30"/>
+                                        <rect key="frame" x="166" y="49" width="42" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Play"/>
+                                        <state key="normal" title="Pause"/>
                                         <connections>
                                             <action selector="playButton:" destination="ppg-Zj-tRQ" eventType="touchUpInside" id="GMZ-XR-dAe"/>
                                         </connections>
@@ -295,6 +302,7 @@
                     <connections>
                         <outlet property="currentTime" destination="10o-w9-AMn" id="Pss-mS-Y9O"/>
                         <outlet property="sliderConnect" destination="bHe-K3-Sz6" id="Acn-8r-eNP"/>
+                        <outlet property="sliderReaccion" destination="7cq-Eh-RXm" id="uy4-gc-yqD"/>
                         <outlet property="totalTime" destination="iCp-Ca-o4y" id="A6O-xb-psE"/>
                         <outlet property="viewRecurso" destination="AkO-Ft-xDD" id="sbx-vw-JK9"/>
                     </connections>
@@ -423,7 +431,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0d-va-dhU">
-                                <rect key="frame" x="170" y="761" width="72" height="30"/>
+                                <rect key="frame" x="20" y="569" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back Door"/>
                                 <connections>

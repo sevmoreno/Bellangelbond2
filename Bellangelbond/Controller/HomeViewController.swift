@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftJWT
 import StoreKit
-
+import MediaPlayer
 
 class HomeViewController: UIViewController {
     
@@ -21,8 +21,37 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
+        DispatchQueue.main.async {
+            
+        let status = MPMediaLibrary.authorizationStatus()
         
+        switch status {
+            
+        case .authorized:
+            
+            let query = MPMediaQuery()
+            let result = query.items
+            print ("Resultado en la library")
+            print(result)
+            
+        case .notDetermined:
+            print(" No determinado")
+            
+        case .denied:
+            print ("fdsbrary")
+            
+        case .restricted:
+            print ("fdsbrary")
+            
+        @unknown default:
+            print ("No se sabe")
+            
+                    }
+        
+        }
+       
       DispatchQueue.main.async {
         SKCloudServiceController.requestAuthorization { (status: SKCloudServiceAuthorizationStatus) in
             
@@ -47,6 +76,9 @@ class HomeViewController: UIViewController {
             }
         }
         }
+ 
+
+        
        /*
         let teamId = "5766G78FC9"
         let keyId = "2ZL2JTUB26"
@@ -68,23 +100,32 @@ class HomeViewController: UIViewController {
         print (token)
  */
         
-        advengers.shared.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjJaTDJKVFVCMjYifQ.eyJpc3MiOiI1NzY2Rzc4RkM5IiwiaWF0IjoxNTY3NTUwNzkyLjY4MTE3ODEsImV4cCI6MTU2NzYzNzE5Mi42ODExNzl9.ngPxIDR_n-MNexgiEb_MlQEz9K3kpeSxEnqmIZxYeUPHsMuoIr6ANfGt4lO4EEbiodi4bMMWzmcaNyhQXDOcWw"
+        advengers.shared.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjhMUTdMQUpMRlkifQ.eyJpc3MiOiI1NzY2Rzc4RkM5IiwiaWF0IjoxNTY3ODA2NTcxLjYzMjM0NSwiZXhwIjoxNTY3ODkyOTcxLjYzMjM0NX0.44F-mTZWq75TUydML66uQpKGtPBLKJ2DXaREod0EqvSGWFEPZxlZBt0ObuMeBPVTQ-y1VsoApUmmoc2z_Pf5hg"
         
-       
+      
+        // Apple Muic
+    
         controller.requestUserToken(forDeveloperToken: developerToken) { userToken, error in
-            // Use this value for recommendation requests.
-            print("Este es el user token")
-            print(userToken)
-            print(error.debugDescription)
+           //  Use this value for recommendation requests.
+             print("Este es el user token")
+             print(userToken)
+             print(error.debugDescription)
+            
+            if userToken != nil {
+                advengers.shared.user.userToken = userToken!
+            }
+            
         }
 
+  
+        
         
         DispatchQueue.main.async {
         SKCloudServiceController().requestStorefrontCountryCode { countryCode, error in
             // Use the value in countryCode for subsequent API requests
-            print("Codigo de Pais")
-            print(countryCode)
-            print(error.debugDescription)
+           print("Codigo de Pais")
+           print(countryCode)
+           print(error.debugDescription)
         }
         
         }
@@ -180,16 +221,16 @@ extension HomeViewController: UITableViewDataSource {
 
             let storageRef = Storage.storage().reference()
             let riversRef = storageRef.child("image/" + advengers.shared.newfeeds[indexPath.row].thumbURL )
-            print("ESTO ES EL NOMBRE DE IMAGEN EL EL ARRAY")
-            print(advengers.shared.newfeeds[indexPath.row].thumbURL)
+           // print("ESTO ES EL NOMBRE DE IMAGEN EL EL ARRAY")
+           // print(advengers.shared.newfeeds[indexPath.row].thumbURL)
             
             let uploadTask = riversRef.getData(maxSize: 10 * 1024 * 1024, completion: { (data, error) in
                // nothing
                 if data != nil {
             contentImage.image = UIImage(data: data!)
                 } else {
-                    print("Error de bajada")
-                    print(error.debugDescription)
+                   // print("Error de bajada")
+                   // print(error.debugDescription)
                     
                 }
                 

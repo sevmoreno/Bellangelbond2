@@ -28,17 +28,17 @@ class DiscoverMusicViewController: UIViewController {
         
         advengers.shared.pathsRef.observe(.value, with: { snapshot in
             
-            print("CONTO \(snapshot.childrenCount) Childrens")
+            // print("CONTO \(snapshot.childrenCount) Childrens")
             
             if snapshot.childrenCount > 0 {
                 
-                print("CONTO CHILDERSS???")
+             //   print("CONTO CHILDERSS???")
                 if let noticia = snapshot.value as? NSDictionary {
                
             
                     for pathnombre in advengers.shared.user.paths {
-                        print("Esto es path nombre")
-                        print(advengers.shared.user.paths.count)
+           //             print("Esto es path nombre")
+           //             print(advengers.shared.user.paths.count)
                         var elemento2 = noticia.value(forKey: pathnombre)
                         
                         if elemento2 != nil {
@@ -47,8 +47,8 @@ class DiscoverMusicViewController: UIViewController {
                         let decoder = JSONDecoder ()
                         let dataP = elemento3.data(using: .utf8)!
                         let contendioDelPath = try! decoder.decode(pathDiscover.self, from: dataP)
-                        print("FINALLLL")
-                        print (contendioDelPath.pathSubtitle)
+                    //    print("FINALLLL")
+               //         print (contendioDelPath.pathSubtitle)
                         //let temporarioPath = pathDiscover ()
                         self.pathsDelUsuario.append(contendioDelPath)
                         self.discoverMusic.reloadData()
@@ -120,7 +120,7 @@ extension DiscoverMusicViewController: UITableViewDataSource {
  */
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("comooon")
+       // print("comooon")
         arraytoSend = pathsDelUsuario[indexPath.item].listaDeMedia
         self.performSegue(withIdentifier: "toPlayList", sender: self)
     }

@@ -47,11 +47,11 @@ class BackDoorViewController: UIViewController {
         
         //============================= NW VERSIO OF JWT WOOORKING
         
-        /*
-        
+       
+       /*
         let teamId = "5766G78FC9"
-        let keyId = "2ZL2JTUB26"
-        let keyFileUrl = Bundle.main.url(forResource: "AuthKey_2ZL2JTUB27", withExtension: "p8")
+        let keyId = "8LQ7LAJLFY"
+        let keyFileUrl = Bundle.main.url(forResource: "AuthKey_8LQ7LAJLFY", withExtension: "p8")
         
         struct MyClaims: Claims {
             let iss: String
@@ -68,7 +68,8 @@ class BackDoorViewController: UIViewController {
         print("Este es el token")
         print (token)
  
- */
+*/
+        
         
         
         //  ========================= TRYING TO CREAT A JWT TO SIGN IN APP MUSIC ================

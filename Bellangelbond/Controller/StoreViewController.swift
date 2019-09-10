@@ -14,8 +14,48 @@ class StoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let searchTerm  = "workouts"
+        let countryCode = "us"
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host   = "api.music.apple.com"
+        components.path   = "/v1/catalog/\(countryCode)/search"
+        
+        components.queryItems = [
+            URLQueryItem(name: "term", value: searchTerm),
+            URLQueryItem(name: "limit", value: "25"),
+            URLQueryItem(name: "types", value: "playlists"),
+        ]
+        
+        let url = components.url
 
-        // Do any additional setup after loading the view.
+       
+        
+        var request = URLRequest(url: url!)
+        request.setValue("Bearer \(advengers.shared.token)", forHTTPHeaderField: "Authorization")
+        request.setValue(advengers.shared.user.userToken, forHTTPHeaderField: "Music-User-Token")
+        
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: request) { data, response, error in
+            
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                print("Data del APi")
+                print(data)
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            }
+            catch {
+            }
+            
+        }
+        
     }
     
 
