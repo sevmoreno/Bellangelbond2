@@ -32,8 +32,14 @@ class PlayerMusciViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let resourceURL = URL (string: mediaToPlay.mediaURL)!
-        player = AVPlayer (url: resourceURL)
+        // Pureba local.
+         let resourceURL = URL (string: mediaToPlay.mediaURL)!
+        
+        let urlPath = Bundle.main.url(forResource: "APM", withExtension: "wav")
+       // let TileUrl = Bundle.main.url(forResource: "04Adagio", withExtension: "m4a")
+        print ("Este es el paht \(urlPath)")
+        
+        player = AVPlayer (url: urlPath!)
         playerLayer = AVPlayerLayer (player: player)
         playerLayer.videoGravity = .resize
         viewRecurso.layer.addSublayer(playerLayer)
